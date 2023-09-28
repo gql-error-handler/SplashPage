@@ -287,7 +287,7 @@ function App() {
           marginLeft: '6vw',
         }}
       >
-        <div /*style={{ marginRight: '40px' }}*/>
+        <div style={{ marginBottom: '10px' }}>
           <Button
             variant="contained"
             color="primary"
@@ -305,7 +305,7 @@ function App() {
           </Button>
         </div>
 
-        <div /*style={{ marginRight: '40px' }}*/>
+        <div style={{ marginBottom: '10px' }}>
           <Button
             variant="contained"
             color="primary"
@@ -323,7 +323,7 @@ function App() {
           </Button>
         </div>
 
-        <div /*style={{ marginRight: '40px' }}*/>
+        <div style={{ marginBottom: '10px' }}>
           <Button
             variant="contained"
             color="primary"
