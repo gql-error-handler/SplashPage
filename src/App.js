@@ -105,9 +105,6 @@ function App() {
             display: 'flex',
             alignItems: 'center',
             flexDirection: 'column',
-            // marginTop: '90px',
-            // marginTop: '5%',
-            // minHeight: '80px',
           }}
         >
           <div
@@ -192,18 +189,12 @@ function App() {
         </Typography>
         <div
           style={{
-            // display: 'inline-block',
             border: '2px solid #e02eaa',
-            // // padding: '2px',
-            // padding: '1%',
-            // // borderRadius: '10px',
             borderRadius: '1%',
-            // maxWidth: '100%',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            width: '80%', // Set the container width as a percentage
-            // paddingBottom: '56.25%', // 16:9 aspect ratio (9 / 16 * 100)
+            width: '80%',
             position: 'relative',
             maxWidth: '1000px',
           }}
@@ -212,11 +203,7 @@ function App() {
             src="https://i.imgur.com/qbEVQJ3.gif"
             alt="gif"
             style={{
-              // width: '700px',
-              // height: '500px',
-              // display: 'block',
               border: '2px solid transparent',
-              // boarderRadius: '8px',
               width: '100%',
               height: 'auto',
               display: 'block',
@@ -241,18 +228,12 @@ function App() {
 
         <div
           style={{
-            // display: 'inline-block',
             border: '2px solid #e02eaa',
-            // // padding: '2px',
-            // padding: '1%',
-            // // borderRadius: '10px',
             borderRadius: '1%',
-            // maxWidth: '100%',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            width: '80%', // Set the container width as a percentage
-            // paddingBottom: '56.25%', // 16:9 aspect ratio (9 / 16 * 100)
+            width: '80%',
             position: 'relative',
             maxWidth: '1000px',
           }}
@@ -261,13 +242,7 @@ function App() {
             src="https://i.imgur.com/a2zVNVU.gif"
             alt="gif"
             style={{
-              // width: '700px',
-              // height: '500px',
-              // display: 'block',
-              // border: '2px solid transparent',
-              // boarderRadius: '8px',
               border: '2px solid transparent',
-              // boarderRadius: '8px',
               width: '100%',
               height: 'auto',
               display: 'block',
@@ -541,5 +516,3 @@ function App() {
 }
 
 export default App;
-
-// export default App;
