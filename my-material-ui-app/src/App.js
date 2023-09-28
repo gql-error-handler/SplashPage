@@ -7,16 +7,14 @@ import {
   Input,
   Button,
 } from '@mui/material';
-// import { Link } from 'react-router-dom';
 import {
   Home as HomeIcon,
   People as PeopleIcon,
   GitHub as GitHubIcon,
   Twitter as TwitterIcon,
   ContentCopy as CopyIcon,
+  LinkedIn as LinkedInIcon,
 } from '@mui/icons-material';
-
-import LinkedInIcon from '@mui/icons-material/LinkedIn'; // Import LinkedInIcon
 
 import './App.css';
 
@@ -28,74 +26,88 @@ function App() {
   };
 
   return (
-    <div className="header">
-      <div className="navbar">
+    <div className="gifDiv">
+      <div className="firstDiv">
         <Paper
           elevation={3}
           style={{
             display: 'flex',
             alignItems: 'center',
-            padding: '10px',
-            marginBottom: '10px',
-            position: 'fixed', // Add this line to set position to fixed
-            top: 0, // Add this line to stick it to the top
-            width: '100%', // Add this line to make it full-width
+            // padding: '10px',
+            padding: '1.5%',
+            // marginBottom: '10px',
+            marginBottom: '1.5%',
+            position: 'fixed',
+            top: 0,
+            width: '100%',
             zIndex: 1000,
-            height: '70px',
-            // backgroundColor: '#e2e6eb',
+            // height: '70px',
+            height: '7%',
+            maxHeight: '50px',
           }}
         >
-          {/* Logo */}
           <img
             src="https://i.imgur.com/mKTfEz2.png"
             alt="gql-error-handler logo"
             style={{
-              width: '63px',
-              height: '72px',
-              padding: '10px',
+              width: '54px',
+              height: '60px',
+              padding: '1.5%',
               marginRight: '10px',
             }}
           />
 
-          {/* Title */}
           <Typography
             variant="h4"
             className="pink-text"
-            style={{ marginLeft: '-10px', fontSize: 24 }}
+            style={{
+              marginLeft: '-10px',
+              fontSize: 20,
+              fontWeight: 'bold',
+            }}
           >
             gql-error-handler
           </Typography>
 
-          {/* Icons */}
-          <div style={{ marginLeft: 'auto', padding: '30px' }}>
+          <div
+            style={{
+              marginLeft: 'auto',
+              padding: '25px',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
             <a href="https://gql-error-handler.com">
               <IconButton style={{ color: '#e02eaa' }}>
-                <HomeIcon />
+                <HomeIcon style={{ fontSize: '20px' }} />
               </IconButton>
             </a>
             <a href="https://twitter.com/gqlerrorhandler">
               <IconButton style={{ color: '#e02eaa' }}>
-                <TwitterIcon />
+                <TwitterIcon style={{ fontSize: '20px' }} />
               </IconButton>
             </a>
             <a href="https://github.com/oslabs-beta/gql-error-handler">
               <IconButton style={{ color: '#e02eaa' }}>
-                <GitHubIcon />
+                <GitHubIcon style={{ fontSize: '20px' }} />
               </IconButton>
             </a>
-            <IconButton style={{ color: '#e02eaa' }}>
-              <PeopleIcon />
-            </IconButton>
+            <a href="#meetTeam">
+              <IconButton style={{ color: '#e02eaa' }}>
+                <PeopleIcon style={{ fontSize: '20px' }} />
+              </IconButton>
+            </a>
           </div>
         </Paper>
 
-        {/* Your other content here */}
         <div
           style={{
             display: 'flex',
             alignItems: 'center',
             flexDirection: 'column',
-            marginTop: '90px',
+            // marginTop: '90px',
+            // marginTop: '5%',
+            // minHeight: '80px',
           }}
         >
           <div
@@ -113,6 +125,7 @@ function App() {
                 height: '200px',
                 padding: '10px',
                 marginBottom: '10px',
+                marginTop: '100px',
               }}
             />
             <Typography
@@ -121,8 +134,9 @@ function App() {
               style={{
                 maxWidth: '600px',
                 textAlign: 'center',
-                fontSize: '16px',
+                fontSize: '18px',
                 fontWeight: 'bold',
+                padding: '1.5%',
               }}
             >
               gql-error-handler is an NPM package containing an Apollo Server
@@ -144,16 +158,9 @@ function App() {
             >
               <Grid container alignItems="center">
                 <Grid item>
-                  {/* Text Input */}
-                  <Input
-                    id="copyInput"
-                    value="npm i gql-error-handler"
-                    // onChange={(e) => setInputValue(e.target.value)}
-                    // style={{ marginRight: '10px' }}
-                  />
+                  <Input id="copyInput" value="npm i gql-error-handler" />
                 </Grid>
                 <Grid item>
-                  {/* Copy Button */}
                   <Button onClick={handleCopyClick}>
                     <IconButton style={{ color: '#e02eaa' }}>
                       <CopyIcon />
@@ -173,28 +180,47 @@ function App() {
           alignItems: 'center',
         }}
       >
-        <Typography variant="body1">
+        <Typography
+          variant="body1"
+          style={{
+            maxWidth: '700px',
+            textAlign: 'center',
+            fontSize: '16px',
+          }}
+        >
           Before using our plugin, no data is returned due to validation errors:
         </Typography>
         <div
           style={{
-            display: 'inline-block',
+            // display: 'inline-block',
             border: '2px solid #e02eaa',
-            padding: '2px',
-            borderRadius: '10px',
+            // // padding: '2px',
+            // padding: '1%',
+            // // borderRadius: '10px',
+            borderRadius: '1%',
+            // maxWidth: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '80%', // Set the container width as a percentage
+            // paddingBottom: '56.25%', // 16:9 aspect ratio (9 / 16 * 100)
+            position: 'relative',
+            maxWidth: '1000px',
           }}
         >
           <img
             src="https://i.imgur.com/qbEVQJ3.gif"
             alt="gif"
             style={{
-              width: '700px',
-              height: '500px',
-              display: 'block',
+              // width: '700px',
+              // height: '500px',
+              // display: 'block',
               border: '2px solid transparent',
-              // padding: '10px',
-              // marginBottom: '10px',
-              boarderRadius: '8px',
+              // boarderRadius: '8px',
+              width: '100%',
+              height: 'auto',
+              display: 'block',
+              boarderRadius: '4%',
             }}
           />
         </div>
@@ -215,23 +241,37 @@ function App() {
 
         <div
           style={{
-            display: 'inline-block',
+            // display: 'inline-block',
             border: '2px solid #e02eaa',
-            padding: '2px',
-            borderRadius: '10px',
+            // // padding: '2px',
+            // padding: '1%',
+            // // borderRadius: '10px',
+            borderRadius: '1%',
+            // maxWidth: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '80%', // Set the container width as a percentage
+            // paddingBottom: '56.25%', // 16:9 aspect ratio (9 / 16 * 100)
+            position: 'relative',
+            maxWidth: '1000px',
           }}
         >
           <img
             src="https://i.imgur.com/a2zVNVU.gif"
             alt="gif"
             style={{
-              width: '700px',
-              height: '500px',
-              display: 'block',
+              // width: '700px',
+              // height: '500px',
+              // display: 'block',
+              // border: '2px solid transparent',
+              // boarderRadius: '8px',
               border: '2px solid transparent',
-              // padding: '10px',
-              // marginBottom: '10px',
-              boarderRadius: '8px',
+              // boarderRadius: '8px',
+              width: '100%',
+              height: 'auto',
+              display: 'block',
+              boarderRadius: '4%',
             }}
           />
         </div>
@@ -240,16 +280,18 @@ function App() {
       <div
         style={{
           display: 'flex',
-          justifyContent: 'center',
-          marginTop: '20px', // Adjust the margin as needed
+          justifyContent: 'space-around',
+          flexWrap: 'wrap',
+          marginTop: '20px',
+          marginRight: '6vw',
+          marginLeft: '6vw',
         }}
       >
-        <div style={{ marginRight: '40px' }}>
+        <div /*style={{ marginRight: '40px' }}*/>
           <Button
             variant="contained"
             color="primary"
             onClick={() => {
-              // Add your redirection logic for Site 1 here
               window.location.href =
                 'https://github.com/oslabs-beta/gql-error-handler';
             }}
@@ -263,13 +305,13 @@ function App() {
           </Button>
         </div>
 
-        <div style={{ marginRight: '40px' }}>
+        <div /*style={{ marginRight: '40px' }}*/>
           <Button
             variant="contained"
             color="primary"
             onClick={() => {
-              // Add your redirection logic for Site 2 here
-              window.location.href = 'https://site2.com';
+              window.location.href =
+                'https://medium.com/@tiffanywong149/gql-error-handler-4ffd04dd2740';
             }}
             style={{
               backgroundColor: '#e02eaa',
@@ -281,12 +323,11 @@ function App() {
           </Button>
         </div>
 
-        <div style={{ marginRight: '40px' }}>
+        <div /*style={{ marginRight: '40px' }}*/>
           <Button
             variant="contained"
             color="primary"
             onClick={() => {
-              // Add your redirection logic for Site 3 here
               window.location.href =
                 'https://www.npmjs.com/package/gql-error-handler';
             }}
@@ -310,25 +351,38 @@ function App() {
           backgroundColor: '#d3dae1',
         }}
       >
-        <div className="meetTeam">
-          {/* Typography */}
-          <Typography variant="h6" style={{ textAlign: 'center' }}>
+        <div id="meetTeam">
+          <Typography
+            variant="h6"
+            style={{
+              textAlign: 'center',
+              padding: '1.5%',
+              fontWeight: 'bold',
+              color: '#e02eaa',
+            }}
+          >
             Meet The Team
           </Typography>
 
-          {/* Container for images and icons */}
           <div
             style={{
               display: 'flex',
-              justifyContent: 'center',
+              justifyContent: 'space-evenly',
               alignItems: 'center',
+              flexWrap: 'wrap',
               marginTop: '10px',
+              width: '100vw',
             }}
           >
-            {/* Member 1 */}
-            <div style={{ marginRight: '20px' }}>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+              }}
+            >
               <img
-                src="image_url_1"
+                src="https://media.licdn.com/dms/image/D4E03AQFlQy2R86FFSw/profile-displayphoto-shrink_400_400/0/1672739939922?e=1701302400&v=beta&t=waODEC3Kyq_qHnCnB9ZzniDqNlB5xQ1Z2K7Qe0aIJGI"
                 alt="Member 1"
                 style={{ width: '100px', height: '100px' }}
               />
@@ -336,7 +390,6 @@ function App() {
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 <IconButton
                   onClick={() => {
-                    // Add your GitHub redirection logic for Member 1 here
                     window.location.href = 'https://github.com/JEF-BY';
                   }}
                 >
@@ -344,7 +397,6 @@ function App() {
                 </IconButton>
                 <IconButton
                   onClick={() => {
-                    // Add your LinkedIn redirection logic for Member 1 here
                     window.location.href =
                       'https://www.linkedin.com/in/jeremy-buronyi/';
                   }}
@@ -354,10 +406,15 @@ function App() {
               </div>
             </div>
 
-            {/* Member 2 */}
-            <div style={{ marginRight: '20px' }}>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+              }}
+            >
               <img
-                src="image_url_2"
+                src="https://media.licdn.com/dms/image/C5103AQHb3YQQgm4L3w/profile-displayphoto-shrink_800_800/0/1516632155890?e=1701302400&v=beta&t=npvTjq5Mmfq2MVpSbGZUqmE_TFg7M7GlGH_7ueqYOYs"
                 alt="Member 2"
                 style={{ width: '100px', height: '100px' }}
               />
@@ -365,7 +422,6 @@ function App() {
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 <IconButton
                   onClick={() => {
-                    // Add your GitHub redirection logic for Member 2 here
                     window.location.href = 'https://github.com/nancyynx88';
                   }}
                 >
@@ -373,8 +429,8 @@ function App() {
                 </IconButton>
                 <IconButton
                   onClick={() => {
-                    // Add your LinkedIn redirection logic for Member 2 here
-                    window.location.href = 'www.linkedin.com/in/naixinyang';
+                    window.location.href =
+                      'https://www.linkedin.com/in/naixinyang/';
                   }}
                 >
                   <LinkedInIcon style={{ color: '#e02eaa' }} />
@@ -382,18 +438,22 @@ function App() {
               </div>
             </div>
 
-            {/* Member 3 */}
-            <div style={{ marginRight: '20px' }}>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+              }}
+            >
               <img
-                src="image_url_1"
-                alt="Member 1"
+                src="https://media.licdn.com/dms/image/D5603AQExBou1W3O2yg/profile-displayphoto-shrink_400_400/0/1695429500793?e=1701302400&v=beta&t=0oVJibDp3m-qfjoQz05ai9aJiLi9NAmKChrQst0pUDA"
+                alt="Member 3"
                 style={{ width: '100px', height: '100px' }}
               />
               <Typography variant="subtitle1">Tiffany Wong</Typography>
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 <IconButton
                   onClick={() => {
-                    // Add your GitHub redirection logic for Member 1 here
                     window.location.href = 'https://github.com/twong-cs';
                   }}
                 >
@@ -401,7 +461,6 @@ function App() {
                 </IconButton>
                 <IconButton
                   onClick={() => {
-                    // Add your LinkedIn redirection logic for Member 1 here
                     window.location.href =
                       'https://www.linkedin.com/in/tiffanywong149/';
                   }}
@@ -411,18 +470,22 @@ function App() {
               </div>
             </div>
 
-            {/* Member 4 */}
-            <div style={{ marginRight: '20px' }}>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+              }}
+            >
               <img
-                src="image_url_1"
-                alt="Member 1"
+                src="https://media.licdn.com/dms/image/D5603AQG-zXNqVWox6g/profile-displayphoto-shrink_200_200/0/1695908396790?e=1701302400&v=beta&t=VQAsWObvrQy5ZXmRd2Ahx15dKATKHCSz8Y3gVz88pc8"
+                alt="Member 4"
                 style={{ width: '100px', height: '100px' }}
               />
               <Typography variant="subtitle1">Samuel Ryder</Typography>
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 <IconButton
                   onClick={() => {
-                    // Add your GitHub redirection logic for Member 1 here
                     window.location.href = 'https://github.com/samryderE';
                   }}
                 >
@@ -430,7 +493,6 @@ function App() {
                 </IconButton>
                 <IconButton
                   onClick={() => {
-                    // Add your LinkedIn redirection logic for Member 1 here
                     window.location.href =
                       'https://www.linkedin.com/in/samuelRyder/';
                   }}
@@ -440,18 +502,22 @@ function App() {
               </div>
             </div>
 
-            {/* Member 5 */}
-            <div style={{ marginRight: '20px' }}>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+              }}
+            >
               <img
-                src="image_url_1"
-                alt="Member 1"
+                src="https://media.licdn.com/dms/image/D5603AQF-scvb3_fj2Q/profile-displayphoto-shrink_200_200/0/1695908877327?e=1701302400&v=beta&t=4M6qSIP64QLXPggI2tqWSHEKEEQSfBK8j-dJBNj-fPg"
+                alt="Member 5"
                 style={{ width: '100px', height: '100px' }}
               />
               <Typography variant="subtitle1">Woobae Kim</Typography>
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 <IconButton
                   onClick={() => {
-                    // Add your GitHub redirection logic for Member 1 here
                     window.location.href = 'https://github.com/woobaekim';
                   }}
                 >
@@ -459,7 +525,6 @@ function App() {
                 </IconButton>
                 <IconButton
                   onClick={() => {
-                    // Add your LinkedIn redirection logic for Member 1 here
                     window.location.href =
                       'https://www.linkedin.com/in/woobaekim/';
                   }}
@@ -468,8 +533,6 @@ function App() {
                 </IconButton>
               </div>
             </div>
-
-            {/* Add more members here as needed */}
           </div>
         </div>
       </div>
